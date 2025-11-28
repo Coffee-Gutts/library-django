@@ -15,11 +15,11 @@ class Migration(migrations.Migration):
             name='Livros',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nome', models.CharField(max_length=100)),
-                ('cpf', models.CharField(max_length=100)),
-                ('curso', models.CharField(max_length=100)),
-                ('dataNascimento', models.DateField()),
-                ('anoMatricula', models.IntegerField()),
+                ('titulo', models.CharField(max_length=100)),
+                ('autor', models.CharField(max_length=100)),
+                ('editora', models.CharField(max_length=100)),
+                ('ISBN', models.DateField()),
+                ('genero', models.IntegerField()),
             ],
         ),
     ]

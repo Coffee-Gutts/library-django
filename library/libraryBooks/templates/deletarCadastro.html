@@ -22,7 +22,7 @@
                         <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Cursos</a>
+                        <a class="nav-link" href="#">editoras</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contato</a>
@@ -40,7 +40,7 @@
     <div class="container mt-5 text-center">
         <h2 class="text-danger">Excluir Livros</h2>
     
-        <p>Tem certeza que deseja excluir o Livros <strong>{{ Livros.nome }}</strong>?</p>
+        <p>Tem certeza que deseja excluir o Livros <strong>{{ Livros.titulo }}</strong>?</p>
     
         <form method="POST">
             {% csrf_token %}

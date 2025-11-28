@@ -21,18 +21,18 @@ def cadastro(request):
     
 
     # if request.method == 'POST': ##cadastrar Livros
-    #     nome= request.POST.get('nome')
-    #     dataNascimento= request.POST.get('dataNascimento')
-    #     cpf= request.POST.get('cpf')
-    #     curso= request.POST.get('curso')
-    #     anoMatricula= request.POST.get('anoMatricula')
+    #     titulo= request.POST.get('titulo')
+    #     ISBN= request.POST.get('ISBN')
+    #     autor= request.POST.get('autor')
+    #     editora= request.POST.get('editora')
+    #     genero= request.POST.get('genero')
 
     #     Livros = Livros(
-    #                 nome=nome,
-    #                 dataNascimento=dataNascimento,
-    #                 cpf=cpf,
-    #                 curso=curso,
-    #                 anoMatricula=anoMatricula,
+    #                 titulo=titulo,
+    #                 ISBN=ISBN,
+    #                 autor=autor,
+    #                 editora=editora,
+    #                 genero=genero,
     #                 )
     #     Livros.save()
 

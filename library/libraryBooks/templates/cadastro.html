@@ -40,55 +40,55 @@
           <form action="{%url 'cadastro' %}" method="POST">
             {% csrf_token %}
             <div class="mb-3">
-              <label for="nome" class="form-label">Nome completo</label>
+              <label for="titulo" class="form-label">titulo completo</label>
               <input
                 type="text"
                 class="form-control"
-                id="nome"
-                name="nome"
-                placeholder="Digite seu nome completo"
+                id="titulo"
+                name="titulo"
+                placeholder="Digite seu titulo completo"
               />
             </div>
 
             <div class="mb-3">
-              <label for="dataNascimento" class="form-label">Data de nascimento</label>
+              <label for="ISBN" class="form-label">Data de nascimento</label>
               <input
                 type="date"
                 class="form-control"
-                id="dataNascimento"
-                name="dataNascimento"
+                id="ISBN"
+                name="ISBN"
               />
             </div>
 
             <div class="mb-3">
-              <label for="curso" class="form-label">Curso</label>
+              <label for="editora" class="form-label">editora</label>
               <input
                 type="text"
                 class="form-control"
-                id="curso"
-                placeholder="Digite o nome do curso"
-                name="curso"
+                id="editora"
+                placeholder="Digite o titulo do editora"
+                name="editora"
               />
             </div>
 
             <div class="mb-3">
-              <label for="cpf" class="form-label">CPF</label>
+              <label for="autor" class="form-label">autor</label>
               <input
                 type="text"
                 class="form-control"
-                id="cpf"
+                id="autor"
                 placeholder="000.000.000-00"
-                name="cpf"
+                name="autor"
               />
             </div>
 
             <div class="mb-3">
-              <label for="anoMatricula" class="form-label">Ano</label>
+              <label for="genero" class="form-label">Ano</label>
               <input
                 type="number"
                 class="form-control"
-                id="anoMatricula"
-                name="anoMatricula"
+                id="genero"
+                name="genero"
                 placeholder="Digite o ano de ingresso"
               />
             </div>

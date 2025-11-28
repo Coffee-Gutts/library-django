@@ -52,7 +52,7 @@
               <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Cursos</a>
+              <a class="nav-link" href="#">editoras</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contato</a>
@@ -80,8 +80,8 @@
       <thead class="table-primary">
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Nome</th>
-          <th scope="col">Curso</th>
+          <th scope="col">titulo</th>
+          <th scope="col">editora</th>
           <th scope="col">Nascimento</th>
           <th scope="col">matricula</th>
           <th scope = "col"> deletar Livros</th>
@@ -93,10 +93,10 @@
         {% for Livros in Livross %}
           <tr>
             <th scope="row">{{ Livros.id }}</th>
-            <td>{{ Livros.nome }}</td>
-            <td>{{ Livros.curso }}</td>
-            <td>{{ Livros.dataNascimento}}</td>
-            <td>{{ Livros.anoMatricula }}</td>
+            <td>{{ Livros.titulo }}</td>
+            <td>{{ Livros.editora }}</td>
+            <td>{{ Livros.ISBN}}</td>
+            <td>{{ Livros.genero }}</td>
             <td>
               <a href="{% url 'deletarCadastro' Livros.id %}" class="btn btn-danger btn-sm">
                 Excluir
