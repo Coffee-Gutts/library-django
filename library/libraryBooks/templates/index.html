@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cadastro de Alunos</title>
+  <title>Cadastro de Livross</title>
 
   <!-- Bootstrap CSS v5.3 -->
   <link
@@ -74,7 +74,7 @@
   </header>
 
   <main class="container mt-4">
-    <h1 class="mb-4 text-primary text-center">Lista de Alunos</h1>
+    <h1 class="mb-4 text-primary text-center">Lista de Livross</h1>
 
     <table class="table table-striped table-hover shadow-sm bg-white rounded">
       <thead class="table-primary">
@@ -84,40 +84,40 @@
           <th scope="col">Curso</th>
           <th scope="col">Nascimento</th>
           <th scope="col">matricula</th>
-          <th scope = "col"> deletar aluno</th>
+          <th scope = "col"> deletar Livros</th>
           <th scope="col">editar</th>
         
         </tr>
       </thead>
       <tbody>
-        {% for aluno in alunos %}
+        {% for Livros in Livross %}
           <tr>
-            <th scope="row">{{ aluno.id }}</th>
-            <td>{{ aluno.nome }}</td>
-            <td>{{ aluno.curso }}</td>
-            <td>{{ aluno.dataNascimento}}</td>
-            <td>{{ aluno.anoMatricula }}</td>
+            <th scope="row">{{ Livros.id }}</th>
+            <td>{{ Livros.nome }}</td>
+            <td>{{ Livros.curso }}</td>
+            <td>{{ Livros.dataNascimento}}</td>
+            <td>{{ Livros.anoMatricula }}</td>
             <td>
-              <a href="{% url 'deletarCadastro' aluno.id %}" class="btn btn-danger btn-sm">
+              <a href="{% url 'deletarCadastro' Livros.id %}" class="btn btn-danger btn-sm">
                 Excluir
               </a>
             </td>
             <td>
-              <a href="{% url 'editarCadastro' aluno.id %}" class="btn btn-danger btn-sm">
+              <a href="{% url 'editarCadastro' Livros.id %}" class="btn btn-danger btn-sm">
                 editar
               </a>
             </td>
           </tr>
         {% empty %}
           <tr>
-            <td colspan="4" class="text-center text-muted">Nenhum aluno cadastrado.</td>
+            <td colspan="4" class="text-center text-muted">Nenhum Livros cadastrado.</td>
           </tr>
         {% endfor %}
       </tbody>
     </table>
 
     <a href="{% url 'cadastro' %}" class="btn btn-primary btn-lg mt-3">
-      Cadastre um novo aluno aqui
+      Cadastre um novo Livros aqui
     </a>
   </main>
 

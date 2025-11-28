@@ -1,8 +1,8 @@
 from django.forms import ModelForm
 
-from.models import Aluno
+from.models import Livros
 
-class AlunoForm(ModelForm):
+class LivrosForm(ModelForm):
     class Meta: 
-        model = Aluno
+        model = Livros
         fields = ['nome','cpf','curso', 'dataNascimento', 'anoMatricula']        

@@ -1,16 +1,16 @@
 from django.shortcuts import render, redirect, HttpResponse
-from .models import Aluno
-from .forms import AlunoForm
+from .models import Livros
+from .forms import LivrosForm
 # Create your views here.
 
 def index(request):
-    lista = Aluno.objects.all()
-    return render(request, 'index.html', {"alunos":lista})
+    lista = Livros.objects.all()
+    return render(request, 'index.html', {"Livross":lista})
 
 def cadastro(request):
     
     if request.method == 'POST':
-        form = AlunoForm(request.POST)
+        form = LivrosForm(request.POST)
         if(form.is_valid()):
             form.save()
         else: 
@@ -20,41 +20,41 @@ def cadastro(request):
     return render(request, 'cadastro.html')
     
 
-    # if request.method == 'POST': ##cadastrar aluno
+    # if request.method == 'POST': ##cadastrar Livros
     #     nome= request.POST.get('nome')
     #     dataNascimento= request.POST.get('dataNascimento')
     #     cpf= request.POST.get('cpf')
     #     curso= request.POST.get('curso')
     #     anoMatricula= request.POST.get('anoMatricula')
 
-    #     aluno = Aluno(
+    #     Livros = Livros(
     #                 nome=nome,
     #                 dataNascimento=dataNascimento,
     #                 cpf=cpf,
     #                 curso=curso,
     #                 anoMatricula=anoMatricula,
     #                 )
-    #     aluno.save()
+    #     Livros.save()
 
         # return redirect('index')
     
 
 def deletarCadastro(request, id):
-    aluno = Aluno.objects.get(id=id)
+    Livros = Livros.objects.get(id=id)
 
     if request.method == 'POST':
-        aluno.delete()
-        return redirect('index')  # volta para a lista de alunos
+        Livros.delete()
+        return redirect('index')  # volta para a lista de Livross
 
     # GET request
-    return render(request, 'deletarCadastro.html', {'aluno': aluno})
+    return render(request, 'deletarCadastro.html', {'Livros': Livros})
 
 
 def editarCadastro(request, id):
-    aluno = Aluno.objects.get(id=id)
+    Livros = Livros.objects.get(id=id)
 
     if request.method == 'POST':
-        form = AlunoForm(request.POST, instance=aluno)
+        form = LivrosForm(request.POST, instance=Livros)
         if form.is_valid():
             form.save()
             return redirect('index')
@@ -62,5 +62,5 @@ def editarCadastro(request, id):
             return HttpResponse(str(form.errors))
 
     # GET request
-    form = AlunoForm(instance=aluno)
-    return render(request, 'editarCadastro.html', {'form': form, 'aluno': aluno})
+    form = LivrosForm(instance=Livros)
+    return render(request, 'editarCadastro.html', {'form': form, 'Livros': Livros})
