@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cadastro de Aluno</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background: #f8f9fa;
+      }
+      .form-container {
+        max-width: 600px;
+        margin: 50px auto;
+      }
+      .card {
+        padding: 30px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border: none;
+        border-radius: 10px;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="py-4 bg-primary text-white text-center">
+      <h2>Cadastro de Aluno</h2>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <div class="card">
+          <form action="{%url 'cadastro' %}" method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome completo</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome completo"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="dataNascimento" class="form-label">Data de nascimento</label>
+              <input
+                type="date"
+                class="form-control"
+                id="dataNascimento"
+                name="dataNascimento"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="curso" class="form-label">Curso</label>
+              <input
+                type="text"
+                class="form-control"
+                id="curso"
+                placeholder="Digite o nome do curso"
+                name="curso"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="cpf" class="form-label">CPF</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cpf"
+                placeholder="000.000.000-00"
+                name="cpf"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="anoMatricula" class="form-label">Ano</label>
+              <input
+                type="number"
+                class="form-control"
+                id="anoMatricula"
+                name="anoMatricula"
+                placeholder="Digite o ano de ingresso"
+              />
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary px-5">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-center py-3 mt-4 text-muted">
+      &copy; 2025 - Cadastro de Alunos
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </body>
+</html>
