@@ -1,5 +1,5 @@
 from django.urls import path
-from library-books.views import index, cadastro, deletarCadastro,editarCadastro
+from libraryBooks.views import index, cadastro, deletarCadastro,editarCadastro
 
 urlpatterns = [
     path('',index, name='index'),
