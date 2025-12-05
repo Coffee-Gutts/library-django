@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cadastro de Livross</title>
+  <title>Cadastro de Livros</title>
 
   <!-- Bootstrap CSS v5.3 -->
   <link
@@ -88,23 +88,22 @@
         
         </tr>
       </thead>
-      <tbody>
-        {% for Livros in Livross %}
-          <tr>
-            <th scope="row">{{ Livros.id }}</th>
-            <td>{{ Livros.titulo }}</td>
-            <td>{{ Livros.editora }}</td>
-            <td>{{ Livros.genero }}</td>
-            <td>{{ Livros.autor }}</td>
-            <td>{{ Livros.ISBN}}</td>
-            <td>
-          </tr>
-        {% empty %}
-          <tr>
-            <td colspan="4" class="text-center text-muted">Nenhum Livro cadastrado.</td>
-          </tr>
-        {% endfor %}
-      </tbody>
+              <tbody>
+          {% for livro in livros %}
+            <tr>
+              <th scope="row">{{ livro.id }}</th>
+              <td>{{ livro.titulo }}</td>
+              <td>{{ livro.editora }}</td>
+              <td>{{ livro.genero }}</td>
+              <td>{{ livro.autor }}</td>
+              <td>{{ livro.ISBN }}</td>
+            </tr>
+          {% empty %}
+            <tr>
+              <td colspan="6" class="text-center text-muted">Nenhum Livro cadastrado.</td>
+            </tr>
+          {% endfor %}
+        </tbody>
     </table>
 
     <a href="{% url 'cadastro' %}" class="btn btn-primary btn-lg mt-3">
