@@ -40,7 +40,7 @@
           <form action="{%url 'cadastro' %}" method="POST">
             {% csrf_token %}
             <div class="mb-3">
-              <label for="titulo" class="form-label">titulo completo</label>
+              <label for="titulo" class="form-label">Titulo completo</label>
               <input
                 type="text"
                 class="form-control"
@@ -50,18 +50,9 @@
               />
             </div>
 
-            <div class="mb-3">
-              <label for="ISBN" class="form-label">Data de nascimento</label>
-              <input
-                type="date"
-                class="form-control"
-                id="ISBN"
-                name="ISBN"
-              />
-            </div>
 
             <div class="mb-3">
-              <label for="editora" class="form-label">editora</label>
+              <label for="editora" class="form-label">Editora</label>
               <input
                 type="text"
                 class="form-control"
@@ -72,24 +63,34 @@
             </div>
 
             <div class="mb-3">
-              <label for="autor" class="form-label">autor</label>
+              <label for="autor" class="form-label">ISBN</label>
               <input
                 type="text"
                 class="form-control"
-                id="autor"
-                placeholder="000.000.000-00"
-                name="autor"
+                id="isbn"
+                name="isbn"
+                maxlength="13"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="genero" class="form-label">Genero</label>
+              <input
+                type="text"
+                class="form-control"
+                id="genero"
+                name="genero"
               />
             </div>
 
             <div class="mb-3">
               <label for="genero" class="form-label">Ano</label>
               <input
-                type="number"
+                type="text"
                 class="form-control"
-                id="genero"
-                name="genero"
-                placeholder="Digite o ano de ingresso"
+                id="ano"
+                name="ano"
+                maxlength="4"
               />
             </div>
 
